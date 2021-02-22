@@ -349,17 +349,13 @@
     left: 50%;
     height: 100%;
     width: 1px;
-    transform: scaleY(1);/*height 크기 변화*/
-    transform-origin: top;/*transform이 적용되는 시작점*/
     background-color: rgb(0,0,0);
-    transition: transform .3s;
 }
 
+/* hover 되었을 때 수직라인 애니메이션 */
 .main-list-wrap .main-btn .btn-more:hover .line:before {
-    transform: scaleY(0);
-    transform-origin: bottom;
+    animation: verticalLine .5s;
 }
-
 
 .main-list-wrap .main-btn .btn-more .txt {
     font-size: 18px;

@@ -23,6 +23,16 @@
     src: url("../font/SamsungSharpSans-Medium.woff") format("woff");
 }
 
+@keyframes verticalLine {
+    from {
+        transform: scale(0);
+        transform-origin: center top;/*transform이 시작되는 위치*/
+        }
+    to {
+        transform: scale(1);
+        } 
+}
+
 body {
     font-family: "SnmsungOneLatin-400", "Malgun Gothic";
     font-size: 12px;
