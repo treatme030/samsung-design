@@ -156,6 +156,7 @@
     bottom: 0;
     width: 70px;
     margin: 0 1.25% 1.25% 0;
+    z-index: 999999;
 }
 
 .btn-main-top span {
@@ -340,6 +341,7 @@
 .main-list-wrap .main-btn .btn-more .line {
     position: relative;
     height: 30px;
+    overflow: hidden;
 }
 
 .main-list-wrap .main-btn .btn-more .line:before {
@@ -352,9 +354,8 @@
     background-color: rgb(0,0,0);
 }
 
-/* hover 되었을 때 수직라인 애니메이션 */
 .main-list-wrap .main-btn .btn-more:hover .line:before {
-    animation: verticalLine .5s;
+    animation: slide-out-slide-in .8s cubic-bezier(.18,.43,.01,.96) 0s 1;
 }
 
 .main-list-wrap .main-btn .btn-more .txt {

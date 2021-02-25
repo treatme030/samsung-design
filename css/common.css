@@ -23,14 +23,11 @@
     src: url("../font/SamsungSharpSans-Medium.woff") format("woff");
 }
 
-@keyframes verticalLine {
-    from {
-        transform: scale(0);
-        transform-origin: center top;/*transform이 시작되는 위치*/
-        }
-    to {
-        transform: scale(1);
-        } 
+@keyframes slide-out-slide-in {
+    0% {transform: translateY(0%);}
+    50% {transform: translateY(100%);}
+    50.02% {transform: translateY(-100%);}
+    100% {transform: translateY(0%);}
 }
 
 body {
