@@ -1,25 +1,25 @@
 @font-face {
-    font-family: "SnmsungOneKorean-400";
+    font-family: "SamsungOneKorean-400";
     src: url("../font/SamsungOneKorean-400.woff") format("woff");
 }
 
 @font-face {
-    font-family: "SnmsungOneKorean-600";
+    font-family: "SamsungOneKorean-600";
     src: url("../font/SamsungOneKorean-600.woff") format("woff");
 }
 
 @font-face {
-    font-family: "SnmsungOneLatin-400";
+    font-family: "SamsungOneLatin-400";
     src: url("../font/SamsungOneLatin-400.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "SnmsungOneLatin-700";
+    font-family: "SamsungOneLatin-700";
     src: url("../font/SamsungOneLatin-700.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "SnmsungOneSharpSans-M";
+    font-family: "SamsungOneSharpSans-M";
     src: url("../font/SamsungSharpSans-Medium.woff") format("woff");
 }
 
@@ -31,7 +31,7 @@
 }
 
 body {
-    font-family: "SnmsungOneLatin-400", "Malgun Gothic";
+    font-family: "SamsungOneLatin-400", "Malgun Gothic";
     font-size: 12px;
     line-height: 1.3;
     text-rendering: optimizeLegibility;
