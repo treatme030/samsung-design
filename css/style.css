@@ -11,6 +11,68 @@
     height: 62px;
 }
 
+/* Open-search */
+.gnb-wrap .open-search {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 60px;
+    transform: translate(0);
+    overflow: hidden;
+    pointer-events: none;
+    transition: transform .38s;
+    z-index: 99999;
+}
+
+    .gnb-wrap .open-search.fixed {
+        position: fixed; 
+        pointer-events: visible;
+        background-color: #fff;
+    }
+
+.gnb-wrap .open-search .box {
+    position: absolute;
+    right: 3.75%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.gnb-wrap .open-search .box form {
+    margin-top: 10px;
+}
+
+.gnb-wrap .open-search .box form input[type="text"] {
+    font-family: "SamsungOneLatin-400";
+    font-size: 18px;
+    line-height: 1;
+    padding-right: 15px;
+    width: 200px;
+    display: inline-block;
+    border: none;
+    outline: none;
+}
+
+.gnb-wrap .open-search .box form a {
+    display: inline-block;
+    margin-top: 3px;
+    outline: none;
+}
+
+.gnb-wrap .open-search .box form a p {
+    font-family: "SamsungOneLatin-700";
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+}
+
+.gnb-wrap .open-search .box form .search-line {
+    display: inline-block;
+    margin-top: 7px;
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+
+    /* Gnb */
 .gnb {
     position: fixed;/*헤더 상단 고정*/
     top: 0;
@@ -18,7 +80,7 @@
     width: 100%;
     height: 70px;
     background-color: rgb(255,255,255);
-    z-index: 9999999;
+    z-index: 99999;
 }
 
 .gnb .slogan-holder {
@@ -27,6 +89,8 @@
     padding: 23px 0 10px;
     display: flex;
     justify-content: center;
+    transform: scale(1);
+    transition: scale 0.5s;
 }
 
 .gnb .slogan-holder h1 {
@@ -55,6 +119,8 @@
     position: absolute;
     top: 26px;
     right: 3.75%;
+    transform: translateY(0);
+    transition: transform .35s 0s;
 }
 
 .gnb .util-holder .lang {
@@ -97,6 +163,66 @@
     background-image: url("../ds-img/icon_search.png");
     background-size: contain;
 }
+
+.gnb .close-btn {
+    position: absolute;
+    top: 6px;
+    right: 3.75%;
+    display: block;
+    margin-right: -21px;
+    padding: 20px;
+    transform: translateY(-300%);
+}
+
+.gnb .close-btn span {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.gnb .close-btn span:before,
+.gnb .close-btn span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 100%;
+    height: 2px;
+    margin-right: -12px;
+    background-color: #000;
+    transform: scale(0) rotate(45deg);
+    transition: transform .5s .2s;
+}
+
+.gnb .close-btn span:after {
+    transform: scale(0) rotate(-45deg);
+}
+
+    #gnbWrap.open .open-search {
+        transform: translateY(100%);
+        transition: transform .5s 0s
+    }
+    #gnbWrap.open .open-search .box {
+        transform: translateY(0);
+        transition: transform .5s 0s
+    }
+    #gnbWrap.open .gnb .util-holder {
+        transform: translateY(-300%);
+        transition: transform .3s .2s;
+    }
+    #gnbWrap.open .gnb .close-btn {
+        transform: translateY(0);
+        transition: transform 0s 0s linear
+    }
+    #gnbWrap.open .gnb .close-btn span:before {
+        transform: scale(1) rotate(45deg);
+        transition: transform .5s .2s
+    }
+    #gnbWrap.open .gnb .close-btn span:after {
+        transform: scale(1) rotate(-45deg);
+        transition: transform .5s .2s
+    }
 
 /* Navbar */
 

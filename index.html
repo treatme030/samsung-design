@@ -16,9 +16,22 @@
 
 		<!-- Header -->
 			<!-- Gnb -->
-			<div class="gnb-wrap">
+			<div id="gnbWrap" class="gnb-wrap">
+				<div class="open-search" id="openSearch">
+					<div class="box">
+						<form id="headerSearch" name="headerSearch">
+							<input type="text" id="searchTxt">
+							<a href="#">
+								<p>SEARCH</p>
+							</a>	
+							<div class="search-line">
+								<span></span>
+							</div>
+						</form>
+					</div>
+				</div>
 				<div class="gnb">
-					<div class="slogan-holder">
+					<div id="slogan" class="slogan-holder">
 						<h1></h1>
 					</div>
 					<div class="logo-holder">
@@ -27,16 +40,19 @@
 						</strong>
 					</div>
 					<div class="util-holder">
-						<a class="m-menu" href=""></a>
+						<a class="m-menu" href="#"></a>
 						<a class="lang" href="#"></a>
-						<div class="search-box">
+						<div id="searchBox" class="search-box">
 							<a class="search" href="#"></a>
 						</div>
 					</div>
+					<a href="#" class="close-btn" id="closeBtn">
+						<span></span>
+					</a>
 				</div>
 			</div>
 			<!-- Navbar -->
-			<nav class="category-holder">
+			<nav id="category" class="category-holder">
 				<ul class="category-box">
 					<li>
 						<a href="#">WE DESIGN</a>
@@ -281,5 +297,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/index.js"></script>
 	</body>
 </html>
