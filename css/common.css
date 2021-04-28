@@ -30,6 +30,10 @@
     100% {transform: translateY(0%);}
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "SamsungOneLatin-400", "Malgun Gothic";
     font-size: 12px;

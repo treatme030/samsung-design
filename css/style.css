@@ -283,7 +283,11 @@
     bottom: 0;
     width: 70px;
     margin: 0 1.25% 1.25% 0;
+    pointer-events: none;
     z-index: 999999;
+    opacity: 0;
+    transition: opacity .5s;
+
 }
 
 .btn-main-top span {
@@ -307,6 +311,11 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+    .btn-main-top.top {
+        pointer-events: visible;
+        opacity: 1;
+    }
 
 @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) {
     .gnb-wrap {
@@ -433,6 +442,7 @@
 /* Main */
 .container {
     width: 100%;
+    min-height: calc(100vh - 200px);
 }
 
 /* Hero */
@@ -561,6 +571,14 @@
     width: 100%;
 }
 
+.main-list-wrap .nocontent-msg {
+    position: relative;
+    display: none;
+    padding-top: 280px;
+    text-align: center;
+    font-size: 24px;
+}
+
 .component-list {
     width: 100%;
     display: flex;
@@ -588,7 +606,7 @@
     padding-top: 56.25%;
 }
 
-.component-list .list-item .text-box .title {
+.component-list .list-item .text-box .item-title {
     font-family: "SamsungOneSharpSans-M", "SamsungOneKorean-600";
     font-size: 30px;
     line-height: 1.2;
@@ -676,7 +694,7 @@
 }
 
 @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) {
-    .component-list .list-item .text-box .title {
+    .component-list .list-item .text-box .item-title {
         font-size: 2.34375vw;
         padding-top: 2.03125vw;
     }
@@ -718,7 +736,7 @@
     .component-list li:nth-child(3n+3) {
         margin-right: 4%;
     }
-    .component-list .list-item .text-box .title {
+    .component-list .list-item .text-box .item-title {
         font-size: 7.46667vw;
         line-height: 1.14286;
         padding: 6.93333vw 4vw 0;
